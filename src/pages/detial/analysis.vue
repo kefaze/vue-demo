@@ -26,7 +26,7 @@
           有效时间：
         </div>
         <div class="sales-board-line-right">
-          <v-chooser :selections="periodList" @on-change="onParamChange('period', $event)"></v-chooser>
+          <v-chooser :linkList="linkObj" :selections="periodList" @on-change="onParamChange('period', $event)"></v-chooser>
         </div>
       </div>
       <div class="sales-board-line">
@@ -166,7 +166,7 @@
 </template>
 
 <script>
-import '../../js/my_scrollbar.js'
+// import '../../js/my_scrollbar.js'
 
 import Vselection from "../../components/base/selection";
 import VMulChooser from "../../components/base/multiplyChooser";
@@ -177,9 +177,9 @@ import Dialog from "../../components/base/Dialog";
 import bankChooser from "../../components/bankChooser";
 import checkOrder from "../../components/checkOrder";
 
-var oMyBar1 = new MyScrollBar({
-    selId: 'wrapper1'
-});
+// var oMyBar1 = new MyScrollBar({
+//     selId: 'wrapper1'
+// });
 export default {
     components: {
         Vselection,
@@ -211,6 +211,7 @@ export default {
                 { name: "asd", count: 18 },
                 { name: "asd", count: 18 }
             ],
+            linkObj:{1:10,2:30,3:40,4:50},
             buyNum: 0,
             buyType: {},
             versions: [],
