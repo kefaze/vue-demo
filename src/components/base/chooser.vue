@@ -51,30 +51,15 @@ export default {
       this.$emit('on-change', this.selections[index])
     },
     getCurrentObject() {
-     
       this.linkObj.forEach((val, index) => {
-
         for(var i in this.linkList){
            var objTmp = {};
-          // console.log(i, this.linkList[i])
           if(val.id.toString() == i.toString()) {
             objTmp.count = this.linkList[i];
             objTmp.name = val.name;
             this.currentArr.push(objTmp);
           }
-          //this.currentArr.push(objTmp);
         }
-        // console.log(Object.keys(this.linkList));
-        // Object.keys(this.linkList).forEach((value, idx)=>{
-        //   console.log(val.id)
-        //   console.log(value)
-        // })
-        // console.log(val.id)
-        //if(val.id == )
-        // for(var i in this.linkObjList){
-        //   alert(1)
-        //   console.log(i)
-        // }
       });
       console.log(this.currentArr)
     }
